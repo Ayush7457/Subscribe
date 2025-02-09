@@ -1,6 +1,10 @@
 body {
     font-family: Arial, sans-serif;
+<<<<<<< HEAD
     background: linear-gradient(135deg, #11998e, #38ef7d);
+=======
+    background: linear-gradient(135deg, #e6bdce, #a2d7ff);
+>>>>>>> c538ea33f910cbcafac6e9d39c2ce6c6c6176cb2
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +50,11 @@ input {
 
 button {
     margin-top: 3%;
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 90%;
+>>>>>>> c538ea33f910cbcafac6e9d39c2ce6c6c6176cb2
     padding: 12px;
     border: none;
     background: rgb(0, 149, 255);
