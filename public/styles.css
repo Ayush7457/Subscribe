@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    background: linear-gradient(135deg, #e6bdce, #a2d7ff);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,10 +37,11 @@ input {
 }
 
 button {
+    margin-top: 3%;
     width: 90%;
     padding: 12px;
     border: none;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgb(0, 149, 255);
     color: white;
     border-radius: 8px;
     cursor: pointer;
