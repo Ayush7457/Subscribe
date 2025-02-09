@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const submitBtn = document.getElementById("submitBtn");
-    const message = document.getElementById("message");
 
     function isValidGmail(email) {
         const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
@@ -10,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function checkInputs() {
-        if (nameInput.value.trim() !== "" && isValidGmail(emailInput.value.trim())) {
+        if (isValidGmail(emailInput.value.trim())) {
             submitBtn.removeAttribute("disabled");
         } else {
             submitBtn.setAttribute("disabled", "true");
@@ -18,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     emailInput.addEventListener("input", checkInputs);
-    nameInput.addEventListener("input", checkInputs);
 
     document.getElementById("loginForm").addEventListener("submit", async function (e) {
         e.preventDefault();
@@ -30,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const userData = {
-            name: nameInput.value,
             email: emailInput.value
         };
 

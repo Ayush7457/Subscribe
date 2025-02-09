@@ -17,7 +17,6 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch(err => console.error("MongoDB Connection Error:", err));
 
 const userSchema = new mongoose.Schema({
-    name: String,
     email: String
 });
 
@@ -31,9 +30,9 @@ function isValidGmail(email) {
 
 // Handle Form Submission
 app.post("/submit", async (req, res) => {
-    const { name, email } = req.body;
+    const { email } = req.body;
 
-    if (!name || !email) {
+    if (!email) {
         return res.status(400).json({ message: "All fields are required" });
     }
 
@@ -42,7 +41,7 @@ app.post("/submit", async (req, res) => {
     }
 
     try {
-        const user = new User({ name, email });
+        const user = new User({ email });
         await user.save();
         res.json({ message: "Login successful!" });
     } catch (error) {
